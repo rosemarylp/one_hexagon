@@ -1,0 +1,71 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  margin: 0;
+  height: 100%;
+  position: relative;
+}
+
+nav {
+	background: rgba(0,0,0,0.8);
+	color: rgba(255,255,255,0.8);
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav ul li {
+	float: left;
+	padding: .5em;
+}
+
+nav a {
+	color: rgba(255,255,255,0.9);
+	text-decoration: none;
+}
+
+.clear-fix {
+	float: none;
+	clear: both;
+}
+
+main {
+	padding: 1em;
+	width: 80%;
+	clear: both;
+}
+
+.feed-description {
+	float: left;
+	width: 60%;
+}
+
+.img-text-featured, .img-post-featured {
+	float: left;
+}
+
+.img-post-featured {
+	width: 40%;
+	float: left;
+}
+
+.img-feed-description {
+	width: 35%;
+	float: left;
+}
+
+.link-more {
+	float: right;
+	width: 40%;
+}
+
+footer {
+	/*position: absolute;*/
+	/*bottom: 0;*/
+	/*width: 100%;*/
+}
