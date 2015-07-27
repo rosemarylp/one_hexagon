@@ -36,8 +36,8 @@
 		<article class="post-image">
 			<h2>Post Title</h2>
 			<h3>July 25 2015</h3>
-			<p class="img-feed-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam distinctio veniam voluptatum commodi architecto aut est, expedita dolores nobis, suscipit odio explicabo ipsa optio harum tenetur, reiciendis delectus ipsum, consectetur!</p>
 			<img src="images/lorem.jpg" alt="" class="img-post-featured">
+			<p class="img-feed-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam distinctio veniam voluptatum commodi architecto aut est, expedita dolores nobis, suscipit odio explicabo ipsa optio harum tenetur, reiciendis delectus ipsum, consectetur!</p>
 			<div class="clear-fix"></div>
 
 			<a href="#" class="link-more">Read More</a>
