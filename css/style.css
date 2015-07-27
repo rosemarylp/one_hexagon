@@ -60,22 +60,33 @@ main {
 	margin-left: 1.5em;
 }
 
+.post-text, .post-img {
+	width: 70%;
+}
+
 .feed-description {
 	float: left;
 	width: 60%;
 }
 
-.img-text-featured, .img-post-featured {
+.img-text-featured {
 	float: left;
 }
 
 .img-post-featured {
-	width: 40%;
+	margin: 0 auto;
+	margin-bottom: 1em;
+}
+
+.img-post-featured img {
+	display: block;
+	margin: 0 auto;
 	margin-bottom: 1em;
 }
 
 .img-feed-description {
-	width: 40%;
+	width: 70%;
+	margin: 0 auto;
 	clear: both;
 }
 
