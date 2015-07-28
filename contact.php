@@ -1,29 +1,8 @@
-<?php 
-$page_heading = false;
-require_once 'inc/header.inc.php'; ?>
+<?php
+$page_heading = "Contact";
+require_once 'inc/header.inc.php';
 
-		<section class="categories-container">
-			<section class="category-health">
-				<a href="#"><img src="images/lorem_small.jpg" alt="" class="categories-unselected"></a>
-				<h2><a href="#">Health &amp; Fitness</a></h2>
-			</section>
-
-			<section class="category-outfits">
-				<a href="#"><img src="images/lorem_small.jpg" alt="" class="categories-unselected"></a>
-				<h2><a href="#">Outfits</a></h2>
-			</section>
-
-			<section class="category-decor">
-				<a href="#"><img src="images/lorem_small.jpg" alt="" class="categories-unselected"></a>
-				<h2><a href="#">Home Decor</a></h2>
-			</section>
-			<div class="clear-fix"></div>
-
-			<hr/>
-
-		</section>
-		<div class="clear-fix"></div>
-
+?>
 		<article class="post-text">
 			<h2><a href="#">Post Title</a></h2>
 			<h3>July 25 2015</h3>
@@ -52,5 +31,5 @@ require_once 'inc/header.inc.php'; ?>
 
 			<a href="#" class="link-more">Read More</a>
 			</figure>
-
+		</article>
 <?php require_once 'inc/footer.inc.php'; ?>
