@@ -11,6 +11,7 @@ body {
   height: 100%;
   position: relative;
   font-family: "Roboto";
+  background-color: rgba(245,245,245,0.6);
 }
 
 h1 {
@@ -86,8 +87,21 @@ main {
 	font-family: "Courgette", "Fjalla One", cursive;
 }
 
+hr {
+	width: 80%;
+	display: block;
+	height: .5em;
+	background-color: #000;
+	margin-top: 2em;
+	margin-bottom: 2.5em;
+}
+
 .post-text, .post-img {
 	width: 70%;
+}
+
+.post-text h2, .post-img h2 {
+	margin-bottom: 0;
 }
 
 .feed-description {

@@ -37,9 +37,12 @@
 				<a href="#"><img src="images/lorem_small.jpg" alt="" class="categories-unselected"></a>
 				<h2><a href="#">Home Decor</a></h2>
 			</section>
+			<div class="clear-fix"></div>
+
+			<hr/>
+
 		</section>
 		<div class="clear-fix"></div>
-		<hr/>
 
 		<article class="post-text">
 			<h2><a href="#">Post Title</a></h2>
