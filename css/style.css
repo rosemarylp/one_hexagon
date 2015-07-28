@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Fjalla+One|Roboto:400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Fjalla+One|Roboto:400,500,700|Courgette);
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -21,6 +21,11 @@ h1 {
 
 h2 {
 	font-size: 1.7em;
+}
+
+h2 a {
+	color: #000;
+	text-decoration: none;
 }
 
 h3 {
@@ -58,6 +63,27 @@ main {
 	width: 90%;
 	clear: both;
 	margin-left: 1.5em;
+}
+
+.categories-container {
+	width: 80%;
+}
+
+.categories-container section {
+	float: left;
+	width: 33%;
+}
+
+.categories-container section img {
+	display: block;
+	margin: 0 auto;
+}
+
+.categories-container section h2 {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+	font-family: "Courgette", "Fjalla One", cursive;
 }
 
 .post-text, .post-img {
