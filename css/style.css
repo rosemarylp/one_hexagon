@@ -102,6 +102,11 @@ main {
 	font-family: "Courgette", "Fjalla One", cursive;
 }
 
+.category-name {
+	font-family: "Courgette", "Fjalla One", cursive;
+	font-size: 2.2em;
+}
+
 hr {
 	width: 80%;
 	display: block;
