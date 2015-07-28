@@ -92,7 +92,10 @@ main {
 
 .link-more {
 	float: right;
-	width: 40%;
+	color: #000;
+	font-family: "Fjalla One";
+	text-decoration: none;
+	border-bottom: 1px solid black;
 }
 
 footer {
