@@ -158,6 +158,12 @@ hr {
 	border-bottom: 1px solid black;
 }
 
+.col-seventy {
+	float: left;
+	width: 70%;
+	margin-right: 1em;
+}
+
 footer {
 	/*position: absolute;*/
 	/*bottom: 0;*/
