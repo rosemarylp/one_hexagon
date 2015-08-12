@@ -68,6 +68,32 @@ nav a:hover {
 	border-bottom: 1px solid rgba(255,255,255,0.9);
 }
 
+/* === Admin Nav === */
+.nested {
+	position: relative;
+}
+
+.nested ul {
+	display: none;
+	width: 150%;
+	position: absolute;
+	top: 2.2em;
+	left: 0;
+	background: rgba(0,0,0,.7);
+	padding-left: 0;
+	padding-right: 4em;
+
+}
+
+.nested:hover ul {
+	display: block;
+}
+
+.nest ul li {
+	float: none;
+	margin-right: 0;
+}
+
 .clear-fix {
 	float: none;
 	clear: both;
@@ -166,7 +192,7 @@ hr {
 }
 
 /* ===Login Page=== */
-form {
+#login {
 	width: 60%;
 	margin: 0 auto;
 }
@@ -187,6 +213,8 @@ form {
 	background: rgba(0,0,0,0.4);
 	color: #000;
 }
+
+/*  === Add Post === */
 
 
 footer {
