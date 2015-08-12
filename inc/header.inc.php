@@ -7,7 +7,7 @@
 </head>
 <body>
 	<header>
-		<h1>OneHexagon</h1>
+		<h1><a href="index.php">OneHexagon</a></h1>
 	<?php require_once 'inc/nav.inc.php'; ?>
 	</header>
 

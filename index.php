@@ -3,18 +3,18 @@ $page_heading = false;
 require_once 'inc/header.inc.php'; ?>
 
 		<section class="categories-container">
-			<section class="category-health">
-				<a href="#"><img src="images/lorem_small.jpg" alt="" class="categories-unselected"></a>
+			<section class="category-health category-unselected">
+				<a href="#"><img src="images/lorem_small.jpg" alt=""></a>
 				<h2><a href="#">Health &amp; Fitness</a></h2>
 			</section>
 
-			<section class="category-outfits">
-				<a href="#"><img src="images/lorem_small.jpg" alt="" class="categories-unselected"></a>
+			<section class="category-outfits, category-selected">
+				<a href="#"><img src="images/lorem_small.jpg" alt=""></a>
 				<h2><a href="#">Outfits</a></h2>
 			</section>
 
-			<section class="category-decor">
-				<a href="#"><img src="images/lorem_small.jpg" alt="" class="categories-unselected"></a>
+			<section class="category-decor category-unselected">
+				<a href="#"><img src="images/lorem_small.jpg" alt=""></a>
 				<h2><a href="#">Home Decor</a></h2>
 			</section>
 			<div class="clear-fix"></div>
