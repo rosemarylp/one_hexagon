@@ -244,13 +244,11 @@ footer {
 
 	.img-text-featured {
 		float: none;
-		margin: 0 auto;
-		width: auto;
+		display: block;
 	}
 
 	.img-text-featured img {
-		width: auto;
-		float: none;
+		width: 40%;
 		margin: 0 auto;
 	}
 }
