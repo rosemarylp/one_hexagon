@@ -8,7 +8,7 @@
 <body>
 	<header>
 		<h1><a href="index.php">OneHexagon Admin</a></h1>
-	<?php require_once 'inc/nav.inc.php'; ?>
+	<?php require_once 'inc/nav_admin.inc.php'; ?>
 	</header>
 
 	<main>
