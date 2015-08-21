@@ -138,28 +138,24 @@ main {
 	background-image: url("../images/lorem_small.jpg");
 }
 
-.hexagon::before {
+.hexagon::before, .hexagon::after {
 	content: "";
 	position: absolute;
-	top: 0;
 	z-index: 10;
 	left: 0;
 	width: 0;
 	height: 0;
 	border-left: 5.5em solid rgba(245,245,245,1);
 	border-right: 5.5em solid rgba(245,245,245,1);
+}
+
+.hexagon::before {
+	top: 0;
 	border-bottom: 2.5em solid transparent;
 }
 
 .hexagon::after {
-	content: "";
-	position: absolute;
 	bottom: 0;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-left: 5.5em solid rgba(245,245,245,1);
-	border-right: 5.5em solid rgba(245,245,245,1);
 	border-top: 2.5em solid transparent;
 }
 
