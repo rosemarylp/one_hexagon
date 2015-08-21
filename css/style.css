@@ -128,6 +128,40 @@ main {
 	font-family: "Courgette", "Fjalla One", cursive;
 }
 
+.hexagon {
+	position: relative;
+	background: rgba(245,245,245,0.6);
+	width: 100%;
+	height: 100%;
+}
+
+.hexagon::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	z-index: 10;
+	left: 0;
+	transform: translateX(30%);
+	width: 0;
+	height: 0;
+	border-left: 5.5em solid rgba(245,245,245,1);
+	border-right: 5.5em solid rgba(245,245,245,1);
+	border-bottom: 2.5em solid transparent;
+}
+
+.hexagon::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translateX(30%);
+	width: 0;
+	height: 0;
+	border-left: 5.5em solid rgba(245,245,245,1);
+	border-right: 5.5em solid rgba(245,245,245,1);
+	border-top: 2.5em solid transparent;
+}
+
 .page-heading {
 	font-family: "Courgette", "Fjalla One", cursive;
 	font-size: 2.2em;

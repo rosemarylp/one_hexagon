@@ -1,4 +1,4 @@
-<?php 
+<?php
 $page_heading = false;
 require_once 'inc/header.inc.php'; ?>
 
@@ -9,7 +9,7 @@ require_once 'inc/header.inc.php'; ?>
 			</section>
 
 			<section class="category-outfits, category-selected">
-				<a href="#"><img src="images/lorem_small.jpg" alt=""></a>
+				<a href="#"><span class="hexagon"><img src="images/lorem_small.jpg" alt=""></span></a>
 				<h2><a href="#">Outfits</a></h2>
 			</section>
 

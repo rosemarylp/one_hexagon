@@ -11,6 +11,7 @@
 				<li><a href="manage_posts.php">Manage Posts</a></li>
 				<li><a href="manage_categories">Manage Categories</a></li>
 				<li><a href="manage_images">Manage Images</a></li>
+				<li><a href="manage_account.php">Manage Account</a></li>
 			</ul></li>
 		<li><a href="add_post.php">+New Post</a></li>
 	</ul>
