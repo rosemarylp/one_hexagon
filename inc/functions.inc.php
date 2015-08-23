@@ -31,11 +31,7 @@
     	try {
     		$paramcount = 1;
     		$stmt = $connection->prepare($sql);
-    		foreach ($parameters as $parameter) {
-    			$parameter = $parameter . '';
-    			$stmt->bindParam($paramcount++, $parameter);
-    		}
-    		$stmt->execute();
+    		$stmt->execute($parameters);
     		return $stmt;
     	}
     	catch (Exception $e) {
