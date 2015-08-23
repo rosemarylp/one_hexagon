@@ -4,7 +4,7 @@ require_once 'inc/header.inc.php'; ?>
 
 		<section class="categories-container">
 			<section class="category-health category-unselected">
-				<a href="#"><img src="images/lorem_small.jpg" alt=""></a>
+				<a href="#"><span></span></a>
 				<h2><a href="#">Health &amp; Fitness</a></h2>
 			</section>
 
@@ -14,7 +14,7 @@ require_once 'inc/header.inc.php'; ?>
 			</section>
 
 			<section class="category-decor category-unselected">
-				<a href="#"><img src="images/lorem_small.jpg" alt=""></a>
+				<a href="#"><span></span></a>
 				<h2><a href="#">Home Decor</a></h2>
 			</section>
 			<div class="clear-fix"></div>

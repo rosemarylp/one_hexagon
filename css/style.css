@@ -128,7 +128,7 @@ main {
 	font-family: "Courgette", "Fjalla One", cursive;
 }
 
-.hexagon {
+span {
 	position: relative;
 	display: block;
 	margin: 0 auto;
