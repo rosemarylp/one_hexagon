@@ -49,7 +49,7 @@
 					<img src=\"images/lorem_small.jpg\" alt=\"\" class=\"img-text-featured\">
 				</figure>";
 			$output .= "<div class=\"clear-fix\"></div>";
-			$output .= "<a href=\"#\" class=\"link-more\">Read More</a>";
+			$output .= "<a href=\"post.php?post_id={$post['id']}\" class=\"link-more\">Read More</a>";
 			$output .= "</article>";
 			$output .= "<div class=\"clear-fix\"></div>";
 		}

@@ -2,9 +2,9 @@
 	<ul>
 		<li><a href="about.php">About</a></li>
 		<li><a href="contact.php">Contact</a></li>
-		<li><a href="category.php">Health &amp; Fitness</a></li>
-		<li><a href="category.php">Outfits</a></li>
-		<li><a href="category.php">Home Decor</a></li>
+		<li><a href="category.php?category_id=4">Health &amp; Fitness</a></li>
+		<li><a href="category.php?category_id=5">Outfits</a></li>
+		<li><a href="category.php?category_id=6">Home Decor</a></li>
 		<li><a href="wishlist.php">Wishlist</a></li>
 		<li class="nested"><a href="#">Admin Tools</a>
 			<ul>

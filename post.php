@@ -11,8 +11,6 @@
 
 
 		foreach ($post as $post_content) {
-			# code...
-		
 
  ?>
 		<article class="post-text">
