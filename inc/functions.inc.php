@@ -11,16 +11,12 @@
 
     function get_records($connection, $sql, $parameters) {
     	try {
-    		$paramcount = 1;
     		$stmt = $connection->prepare($sql);
 
-    		foreach ($parameters as $parameter) { 
-    			$stmt->bindParam($paramcount++, $parameter);
-    		}
-
 			$stmt->setFetchMode (PDO::FETCH_ASSOC);
-			$stmt->execute();
-    		return $stmt;
+			$stmt->execute($parameters);
+			//returns associative array
+    		return $stmt->fetchAll();
     	} catch (Exception $e) {
     		echo '"error":"' . $e->getCode() . '","text":"' . $e->getMessage() . '"';
     		exit;
@@ -29,7 +25,6 @@
 
     function write_records($connection, $sql, $parameters) {
     	try {
-    		$paramcount = 1;
     		$stmt = $connection->prepare($sql);
     		$stmt->execute($parameters);
     		return $stmt;
@@ -38,6 +33,27 @@
     		echo '"error":"' . $e->getCode() . '","text:"' . $e->getMessage() . '"';
     		exit;
     	}
+    }
+
+    function output_posts($posts) {
+    	//outputs HTML for post feed
+    	$output = "";
+    	foreach ($posts as $post) {
+	    	$output .= "<article class=\"post-text\">";
+	    	$output .= "<h2><a href=\"#\">{$post['title']}</a></h2>";
+	    	$output .= "<h3>{$post['date']}</h3>";
+	    	$output .= "<p class=\"feed-description\">
+					{$post['summary']}
+				</p>";
+			$output .= "<figure class=\"img-text-featured\">
+					<img src=\"images/lorem_small.jpg\" alt=\"\" class=\"img-text-featured\">
+				</figure>";
+			$output .= "<div class=\"clear-fix\"></div>";
+			$output .= "<a href=\"#\" class=\"link-more\">Read More</a>";
+			$output .= "</article>";
+			$output .= "<div class=\"clear-fix\"></div>";
+		}
+		return $output;
     }
 
  ?>

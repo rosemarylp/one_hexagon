@@ -1,6 +1,7 @@
 <?php
 $page_heading = false;
-require_once 'inc/header.inc.php'; ?>
+require_once 'inc/header.inc.php';
+require_once 'inc/functions.inc.php'; ?>
 
 		<section class="categories-container">
 			<section class="category-health category-unselected">
@@ -24,7 +25,18 @@ require_once 'inc/header.inc.php'; ?>
 		</section>
 		<div class="clear-fix"></div>
 
-		<article class="post-text">
+		<?php 
+		//static value for now
+		$category = 5;
+		$parameters = [$category];
+		$sql = "SELECT * FROM posts WHERE category = ?";
+		$posts = get_records($connection, $sql, $parameters);
+		echo output_posts($posts);
+
+
+		 ?>
+
+		<!-- <article class="post-text">
 			<h2><a href="#">Post Title</a></h2>
 			<h3>July 25 2015</h3>
 			<p class="feed-description">
@@ -51,6 +63,6 @@ require_once 'inc/header.inc.php'; ?>
 			<div class="clear-fix"></div>
 
 			<a href="#" class="link-more">Read More</a>
-			</figure>
+			</figure> -->
 
 <?php require_once 'inc/footer.inc.php'; ?>
