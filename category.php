@@ -14,7 +14,7 @@
 		<?php
 		echo "<p>{$category_info[0]['summary']}</p>";
 		//redefine sql query
-		$sql = "SELECT id, title, date, summary FROM posts WHERE category=?";
+		$sql = "SELECT id, title, date_updated, summary FROM posts WHERE category=?";
 		$posts = get_records($connection, $sql, $parameters);
 		// $page_title = $posts[0]
 

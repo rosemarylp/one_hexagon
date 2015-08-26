@@ -5,18 +5,18 @@ require_once 'inc/functions.inc.php'; ?>
 
 		<section class="categories-container">
 			<section class="category-health category-unselected">
-				<a href="#"><span></span></a>
-				<h2><a href="#">Health &amp; Fitness</a></h2>
+				<a href="category.php?category_id=4"><span></span></a>
+				<h2><a href="category.php?category_id=4">Health &amp; Fitness</a></h2>
 			</section>
 
 			<section class="category-outfits, category-selected">
-				<a href="#"><span class="hexagon"></span></a>
-				<h2><a href="#">Outfits</a></h2>
+				<a href="category.php?category_id=5"><span class="hexagon"></span></a>
+				<h2><a href="category.php?category_id=5">Outfits</a></h2>
 			</section>
 
 			<section class="category-decor category-unselected">
-				<a href="#"><span></span></a>
-				<h2><a href="#">Home Decor</a></h2>
+				<a href="category.php?category_id=6"><span></span></a>
+				<h2><a href="category.php?category_id=6">Home Decor</a></h2>
 			</section>
 			<div class="clear-fix"></div>
 
@@ -29,7 +29,7 @@ require_once 'inc/functions.inc.php'; ?>
 		//static value for now
 		$category = 5;
 		$parameters = [$category];
-		$sql = "SELECT * FROM posts WHERE category = ?";
+		$sql = "SELECT id, title, date_updated, summary FROM posts WHERE category = ?";
 		$posts = get_records($connection, $sql, $parameters);
 		echo output_posts($posts);
 
