@@ -14,7 +14,7 @@
 
  ?>
 		<article class="post-text">
-			<h3><?php echo $post_content["date_updated"]; ?></h3>
+			<h3><?php echo date('n/j/y - g:i a',strtotime($post_content["date_updated"])); ?></h3>
 			<div class="col-seventy">
 				<?php echo $post_content["content"]; ?>
 			</div>

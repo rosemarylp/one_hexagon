@@ -41,7 +41,7 @@
     	foreach ($posts as $post) {
 	    	$output .= "<article class=\"post-text\">";
 	    	$output .= "<h2><a href=\"#\">{$post['title']}</a></h2>";
-	    	$output .= "<h3>{$post['date_updated']}</h3>";
+	    	$output .= "<h3>" . date('n/j/y - g:i a',strtotime($post['date_updated'])) . "</h3>";
 	    	$output .= "<p class=\"feed-description\">
 					{$post['summary']}
 				</p>";
