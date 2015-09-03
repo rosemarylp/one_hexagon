@@ -23,7 +23,15 @@
 			</figure>
 			<div class="clear-fix"></div>
 
-			<a href="#" class="link-more">More Category Name</a>
+			<?php //get category info
+				$category_id = $post_content["category"];
+				$sql = "SELECT title FROM categories WHERE id = ?";
+				$parameters = [$category_id];
+				$category = get_records($connection, $sql, $parameters);
+
+			 ?>
+
+			<a href="category.php?category_id=<?php echo $category_id ?>" class="link-more">More <?php echo $category[0]["title"]; ?></a>
 		</article>
 <?php }} else {
 		// redirect_to("index.php");
