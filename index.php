@@ -25,28 +25,36 @@ require_once 'inc/functions.inc.php'; ?>
 
 		<section class="categories-container">
 			<section class="category-health category-unselected">
-				<a href="category.php?category_id=4"><span></span></a>
+				<!-- <a href="category.php?category_id=4"><span></span></a> -->
+				<label for="health_button">
+				<span></span>
 				<h2><a href="category.php?category_id=4">Health &amp; Fitness</a></h2>
+				</label>
+				<input type="radio" name="category" id="health_button" class="category-radio" value="4">
 			</section>
 
 			<section class="category-outfits, category-selected">
-				<a href="category.php?category_id=5"><span class="hexagon"></span></a>
+				<!-- <a href="category.php?category_id=5"><span class="hexagon"></span></a> -->
+				<label for="outfit_button">
+				<span class="hexagon"></span>
 				<h2><a href="category.php?category_id=5">Outfits</a></h2>
+				</label>
+				<input type="radio" id="outfit_button" class="category-radio" name="category" value="5">
 			</section>
 
 			<section class="category-decor category-unselected">
-				<a href="category.php?category_id=6"><span></span></a>
-				<h2><a href="category.php?category_id=6">Home Decor</a></h2>
+				<label for="decor_button">
+					<!-- <a href="category.php?category_id=6"><span></span></a> -->
+					<span></span>
+					<h2><a href="category.php?category_id=6">Home Decor</a></h2>
+				</label>
+				<input type="radio" id="decor_button" class="category-radio" name="category" value="6">
 			</section>
 			<div class="clear-fix"></div>
-			<!-- Category Radio Buttons -->
-				<input type="radio" name="category" class="category" value="4">Health &amp; Fitness<br/>
-				<input type="radio" class="category" name="category" value="5">Outfits<br/>
-				<input type="radio" class="category" name="category" value="6">Home Decor
 
 				<script>
 				//When a new category is checked, update the posts displayed
-				$(".category").change(function() {
+				$(".category-radio").change(function() {
 					console.log("This is: "+this.value);
 					get_posts(this.value);
 				});
