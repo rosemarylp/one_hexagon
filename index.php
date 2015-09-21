@@ -2,6 +2,26 @@
 $page_heading = false;
 require_once 'inc/header.inc.php';
 require_once 'inc/functions.inc.php'; ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+//resource: http://www.w3schools.com/php/php_ajax_database.asp
+	function get_posts(category) {
+		console.log(category);
+		if (category == "") {
+			$("#post_container").innerHTML = "fuck";
+			return;
+		} else {
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					document.getElementById("post_container").innerHTML = xmlhttp.responseText;
+				}
+			}
+		}
+		xmlhttp.open("GET","get_post.php?category="+category,true);
+		xmlhttp.send();
+	}
+</script>
 
 		<section class="categories-container">
 			<section class="category-health category-unselected">
@@ -19,50 +39,31 @@ require_once 'inc/functions.inc.php'; ?>
 				<h2><a href="category.php?category_id=6">Home Decor</a></h2>
 			</section>
 			<div class="clear-fix"></div>
+			<!-- Category Radio Buttons -->
+				<input type="radio" name="category" class="category" value="4">Health &amp; Fitness<br/>
+				<input type="radio" class="category" name="category" value="5">Outfits<br/>
+				<input type="radio" class="category" name="category" value="6">Home Decor
+
+				<script>
+				//When a new category is checked, update the posts displayed
+				$(".category").change(function() {
+					console.log("This is: "+this.value);
+					get_posts(this.value);
+				});
+				</script>
 
 			<hr/>
 
 		</section>
 		<div class="clear-fix"></div>
-
-		<?php 
-		//static value for now
-		$category = 5;
-		$parameters = [$category];
-		$sql = "SELECT id, title, date_updated, summary FROM posts WHERE category = ?";
-		$posts = get_records($connection, $sql, $parameters);
-		echo output_posts($posts);
-
-
-		 ?>
-
-		<!-- <article class="post-text">
-			<h2><a href="#">Post Title</a></h2>
-			<h3>July 25 2015</h3>
-			<p class="feed-description">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam distinctio veniam voluptatum commodi architecto aut est, expedita dolores nobis, suscipit odio explicabo ipsa optio harum tenetur, reiciendis delectus ipsum, consectetur!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, velit. Debitis similique veniam laboriosam nam fugit iusto exercitationem, iure, commodi, qui a tenetur corrupti hic odio pariatur neque cupiditate cum.
-			</p>
-			<figure class="img-text-featured">
-				<img src="images/lorem_small.jpg" alt="" class="img-text-featured">
-			</figure>
-			<div class="clear-fix"></div>
-
-			<a href="#" class="link-more">Read More</a>
-		</article>
-
-		<div class="clear-fix"></div>
-
-		<article class="post-img">
-			<h2><a href="#">Post Title</a></h2>
-			<h3>July 25 2015</h3>
-			<figure  class="img-post-featured">
-				<img src="images/lorem.jpg" alt="">
-				<figcaption class="img-feed-description">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam distinctio veniam voluptatum commodi architecto aut est, expedita dolores nobis, suscipit odio explicabo ipsa optio harum tenetur, reiciendis delectus ipsum, consectetur!
-				</figcaption>
-			<div class="clear-fix"></div>
-
-			<a href="#" class="link-more">Read More</a>
-			</figure> -->
+		<div id="post_container">
+			<?php
+			//Shows posts from all categories by date
+			$sql = "SELECT id, title, date_updated, summary FROM posts ORDER BY date_updated DESC";
+			$parameters = [];
+			$posts = get_records($connection, $sql, $parameters);
+			echo output_posts($posts);
+			 ?>
+		</div>
 
 <?php require_once 'inc/footer.inc.php'; ?>
